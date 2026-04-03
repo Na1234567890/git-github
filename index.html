@@ -1,0 +1,547 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Naveed Aslam | Senior Network & System Infrastructure Architect</title>
+    <!-- Google Fonts + Font Awesome 6 (free) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f4f7fc;
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* header / hero */
+        .hero {
+            background: linear-gradient(135deg, #0f2b3d 0%, #1b4f6e 100%);
+            border-radius: 2rem;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2.5rem;
+            color: white;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.15);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .hero .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-top: 0.5rem;
+        }
+
+        .hero .badge {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .hero .contact-links {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero .contact-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero .contact-links a:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        /* section titles */
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+            letter-spacing: -0.3px;
+            background: linear-gradient(120deg, #1e4b6e, #2c6e9e);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: #2c6e9e;
+            border-radius: 3px;
+        }
+
+        /* experience grid / cards */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-bottom: 3rem;
+        }
+
+        .exp-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        .exp-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+        }
+
+        .exp-header {
+            padding: 1.5rem 1.8rem 0.8rem 1.8rem;
+            border-bottom: 1px solid #eef2f6;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.8rem;
+        }
+        .exp-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0c4a6e;
+        }
+        .exp-company {
+            font-weight: 600;
+            color: #2d5f7e;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+        .exp-date {
+            background: #e9f0f5;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1e4b6e;
+            white-space: nowrap;
+        }
+        .exp-body {
+            padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+        }
+        .exp-body ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .exp-body li {
+            margin-bottom: 0.7rem;
+            padding-left: 1.6rem;
+            position: relative;
+            font-size: 0.96rem;
+            color: #2c3f4f;
+        }
+        .exp-body li i {
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+            color: #2c6e9e;
+            font-size: 0.9rem;
+            width: 1.2rem;
+        }
+
+        /* two column layout for education & certs */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 2rem;
+        }
+        .info-card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.6rem 1.8rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eef2f6;
+            transition: 0.2s;
+        }
+        .info-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: #155e75;
+            border-left: 4px solid #2c6e9e;
+            padding-left: 1rem;
+        }
+        .edu-item {
+            margin-bottom: 1rem;
+        }
+        .edu-degree {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .edu-school {
+            font-size: 0.9rem;
+            color: #4a627a;
+        }
+        .cert-list, .lang-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .cert-list li, .lang-list li {
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .cert-list i, .lang-list i {
+            color: #2c6e9e;
+            width: 1.4rem;
+        }
+
+        .projects-section {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 1.8rem 2rem;
+            margin: 2rem 0 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eef2f6;
+        }
+        .projects-section h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            color: #155e75;
+        }
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .project-tag {
+            background: #eef2ff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e4b6e;
+        }
+        .achievement-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        .achievement-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .achievement-list li i {
+            position: absolute;
+            left: 0;
+            top: 0.2rem;
+            color: #1f7b4d;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, #cbdde9, transparent);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #5b7a97;
+            border-top: 1px solid #dce5ec;
+        }
+
+        @media (max-width: 680px) {
+            .container {
+                padding: 1.2rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .exp-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .exp-title {
+                font-size: 1.3rem;
+            }
+            .section-title {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Hero / Profile Section -->
+    <div class="hero">
+        <h1>Naveed Aslam</h1>
+        <div class="tagline">
+            <i class="fas fa-network-wired"></i> Senior Network & System Infrastructure Architect
+            <span style="font-size:0.85rem; background:rgba(255,255,255,0.2); padding:0.2rem 0.8rem; border-radius:30px;">15+ years expertise</span>
+        </div>
+        <div class="badge-group">
+            <span class="badge"><i class="fas fa-cloud"></i> Multi-Cloud (AWS/GCP)</span>
+            <span class="badge"><i class="fas fa-shield-alt"></i> Firewalls (FortiGate/Cisco/Juniper)</span>
+            <span class="badge"><i class="fab fa-linux"></i> Linux/DevOps</span>
+            <span class="badge"><i class="fas fa-chart-line"></i> Zabbix Monitoring</span>
+        </div>
+        <div class="contact-links">
+            <a href="#"><i class="fab fa-github"></i> github/naveed-aslam</a>
+            <a href="#"><i class="fab fa-linkedin"></i> linkedin/in/naveed-aslam</a>
+            <a href="#"><i class="fas fa-envelope"></i> naveed.aslam@proton.me</a>
+        </div>
+    </div>
+
+    <!-- Work Experience Section (main focus) -->
+    <div>
+        <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+        <div class="timeline">
+            
+            <!-- Senior Manager - System & Network Administrator (BMA Capital) -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Senior Manager - System & Network Administrator</div>
+                        <div class="exp-company"><i class="fas fa-building"></i> BMA Capital Brokerage House</div>
+                    </div>
+                    <div class="exp-date"><i class="far fa-calendar-alt"></i> Oct 2024 – Nov 2025</div>
+                </div>
+                <div class="exp-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Managed enterprise network infrastructure including LAN/WAN and VPN connectivity</li>
+                        <li><i class="fas fa-check-circle"></i> Configured and maintained firewalls (FortiGate, Cisco ASA)</li>
+                        <li><i class="fas fa-check-circle"></i> Implemented monitoring solutions to ensure uptime and performance</li>
+                        <li><i class="fas fa-check-circle"></i> Administered virtualized environments using VMware</li>
+                        <li><i class="fas fa-check-circle"></i> Managed Dell SAN enterprise array and storage optimization</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Senior Network Administrator - AJCL Pvt Ltd -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Senior Network Administrator</div>
+                        <div class="exp-company"><i class="fas fa-building"></i> AJCL Pvt Ltd</div>
+                    </div>
+                    <div class="exp-date"><i class="far fa-calendar-alt"></i> Aug 2023 – Oct 2024</div>
+                </div>
+                <div class="exp-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Designed and maintained secure network architecture (LAN/DMZ)</li>
+                        <li><i class="fas fa-check-circle"></i> Managed DNS, DHCP, VPN, and enterprise firewall configurations</li>
+                        <li><i class="fas fa-check-circle"></i> Deployed Zabbix monitoring for infrastructure visibility & proactive alerts</li>
+                        <li><i class="fas fa-check-circle"></i> Reduced system downtime through proactive maintenance & patch strategies</li>
+                        <li><i class="fas fa-check-circle"></i> Synology NAS management for automated user backups & data redundancy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Network & Linux Administrator - Right Solution (long tenure) -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Network & Linux Administrator</div>
+                        <div class="exp-company"><i class="fas fa-building"></i> Right Solution</div>
+                    </div>
+                    <div class="exp-date"><i class="far fa-calendar-alt"></i> Apr 2010 – Jul 2023</div>
+                </div>
+                <div class="exp-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Managed Linux servers & web hosting environments (Apache, NGINX)</li>
+                        <li><i class="fas fa-check-circle"></i> Administered cloud infrastructure across AWS, GCP, DigitalOcean</li>
+                        <li><i class="fas fa-check-circle"></i> Configured virtualization environments (Proxmox, VMware ESXi)</li>
+                        <li><i class="fas fa-check-circle"></i> Implemented backup & disaster recovery strategies (onsite/offsite)</li>
+                        <li><i class="fas fa-check-circle"></i> Supported VoIP systems including FreePBX and SIP trunking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Network Administrator - Eingtech IT Software Company -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Network Administrator</div>
+                        <div class="exp-company"><i class="fas fa-building"></i> Eingtech IT Software Company</div>
+                    </div>
+                    <div class="exp-date"><i class="far fa-calendar-alt"></i> Mar 2009 – Mar 2011</div>
+                </div>
+                <div class="exp-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Installed and maintained network systems, hardware & structured cabling</li>
+                        <li><i class="fas fa-check-circle"></i> Provided user support and enterprise troubleshooting</li>
+                        <li><i class="fas fa-check-circle"></i> Managed SharePoint server and Microsoft SQL Express databases</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- College of Account & Management Sciences (Lab/Systems role) -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Lab & Systems Administrator</div>
+                        <div class="exp-company"><i class="fas fa-university"></i> College of Account & Management Sciences</div>
+                    </div>
+                    <div class="exp-date"><i class="far fa-calendar-alt"></i> Apr 2007 – Apr 2008</div>
+                </div>
+                <div class="exp-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Managed computer labs, user access rights, and software deployments</li>
+                        <li><i class="fas fa-check-circle"></i> Installed and maintained system images, lab infrastructure uptime</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hardware Technician - Wavetec -->
+            <div class="exp-card">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Hardware Technician</div>
+                        <div class="exp-company"><i class="fas fa-microchip"></i> Wavetec</div>
+                    </div>
+                    <div class="exp-date"><i class="far fa-calendar-alt"></i> Sep 2006 – Feb 2007</div>
+                </div>
+                <div class="exp-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Installed and repaired computer hardware systems, peripheral troubleshooting</li>
+                        <li><i class="fas fa-check-circle"></i> Hardware diagnostics and component-level maintenance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- KEY PROJECTS & ACHIEVEMENTS Section (explicit from CV) -->
+    <div class="projects-section">
+        <h3><i class="fas fa-rocket"></i> Key Projects & Achievements</h3>
+        <ul class="achievement-list">
+            <li><i class="fas fa-check-circle" style="color:#1f7b4d;"></i> Managed and maintained cloud infrastructure across AWS and Google Cloud with high availability</li>
+            <li><i class="fas fa-check-circle" style="color:#1f7b4d;"></i> Deployed NGINX reverse proxy and load balancing solutions for high-traffic web apps</li>
+            <li><i class="fas fa-check-circle" style="color:#1f7b4d;"></i> Implemented Zabbix monitoring for enterprise network visibility (SNMP, custom dashboards)</li>
+            <li><i class="fas fa-check-circle" style="color:#1f7b4d;"></i> Configured multi-vendor firewall environments (FortiGate, Cisco ASA, Juniper SRX)</li>
+            <li><i class="fas fa-check-circle" style="color:#1f7b4d;"></i> Designed and supported VoIP systems using FreePBX, reducing communication costs by 30%</li>
+            <li><i class="fas fa-check-circle" style="color:#1f7b4d;"></i> Improved system reliability and reduced downtime through proactive monitoring & automated alerting</li>
+        </ul>
+        <div class="projects-grid">
+            <span class="project-tag"><i class="fas fa-chart-simple"></i> Zabbix Enterprise</span>
+            <span class="project-tag"><i class="fas fa-firewall"></i> FortiGate/Cisco</span>
+            <span class="project-tag"><i class="fas fa-cloud-upload-alt"></i> AWS/GCP Hybrid</span>
+            <span class="project-tag"><i class="fas fa-phone-alt"></i> FreePBX VoIP</span>
+            <span class="project-tag"><i class="fas fa-tachometer-alt"></i> Load Balancing</span>
+        </div>
+    </div>
+
+    <!-- Education, Certifications & Languages (2 column layout) -->
+    <div class="info-grid">
+        <!-- Education Card -->
+        <div class="info-card">
+            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="edu-item">
+                <div class="edu-degree">MCS (Master of Computer Science)</div>
+                <div class="edu-school">PAF-KIET University – 2018</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-degree">B-Tech Electronics</div>
+                <div class="edu-school">Preston Institute (PIMSAT) – 2007</div>
+            </div>
+            <div class="edu-item">
+                <div class="edu-degree">DAE (CIT Technology)</div>
+                <div class="edu-school">Technical Board – 2006</div>
+            </div>
+        </div>
+
+        <!-- Certifications & Languages combined or separate? but show both in one card for symmetry -->
+        <div class="info-card">
+            <h3><i class="fas fa-certificate"></i> Certifications & Training</h3>
+            <ul class="cert-list">
+                <li><i class="fab fa-microsoft"></i> MCITP Training (Microsoft Certified IT Professional)</li>
+                <li><i class="fas fa-shield-alt"></i> CCNA Training (Cisco Certified Network Associate)</li>
+                <li><i class="fab fa-linux"></i> Linux Administration Course – Advanced Server Mgmt</li>
+            </ul>
+            <hr>
+            <h3 style="margin-top: 0.5rem; font-size:1.3rem;"><i class="fas fa-language"></i> Languages</h3>
+            <ul class="lang-list">
+                <li><i class="fas fa-comment-dots"></i> English – Professional Working Proficiency</li>
+                <li><i class="fas fa-globe"></i> Urdu – Native / Bilingual</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Additional Skills Snapshot (optional but adds depth) -->
+    <div class="projects-section" style="background: #fefefe;">
+        <h3><i class="fas fa-cogs"></i> Core Competencies</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.8rem;">
+            <span class="project-tag" style="background:#e2f0fa;">🔹 LAN/WAN & VPN</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 FortiGate / Cisco ASA</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 VMware / Proxmox</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 AWS / GCP / DO</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 NGINX / Apache</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 Zabbix / Monitoring</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 Dell SAN / Synology NAS</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 Disaster Recovery</span>
+            <span class="project-tag" style="background:#e2f0fa;">🔹 FreePBX VoIP</span>
+        </div>
+        <p style="margin-top: 1.2rem; font-size:0.9rem; color:#3a6b8c;"><i class="fas fa-sync-alt"></i> 15+ years cross-domain experience: enterprise networking, cloud architecture, security, and infrastructure automation.</p>
+    </div>
+
+    <footer>
+        <i class="far fa-copyright"></i> 2025 Naveed Aslam – Professional CV Portfolio. Based on real-world infrastructure leadership & network engineering expertise.
+        <br><span style="font-size:0.75rem;">Designed for GitHub Pages | Fully responsive | All experience extracted from official CV</span>
+    </footer>
+</div>
+</body>
+</html>
